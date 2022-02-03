@@ -33,6 +33,23 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 10px;
 }
 
+.custom-btn-style {
+  background: url('/assets/img/Chatbot_icon_small.png');
+  /* image source: https://www.flaticon.com/premium-icon/chatbot_2068998 */
+  background-position:center;
+  background-repeat:no-repeat;
+  border: solid, 1px, #04AA6D;
+  color: white;
+  padding: 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+  margin: 0.5em 0.25em;
+  border-radius: 50%;  
+  width: 75px;
+  height: 75px;
+}
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -607,7 +624,8 @@ section {
 
 #chatbot #chat-button button
 {
-  width: 100%;
+  margin: auto;
+  float: right;
 }
 
 @media (max-width: 992px) {
