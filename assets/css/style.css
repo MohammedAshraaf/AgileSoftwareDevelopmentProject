@@ -27,6 +27,12 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
 
+.custom-img-style {
+  padding: 10px; 
+  border: 1px solid #ddd; 
+  border-radius: 10px;
+}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -123,7 +129,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   padding: 10px 0 10px 30px;
   font-family: "Raleway", sans-serif;
-  font-size: 15px;
+  font-size: 22px;
   color: #47536e;
   white-space: nowrap;
   transition: 0.3s;
@@ -325,15 +331,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 #hero h2 {
   color: #515f7d;
-  margin-bottom: 50px;
+  margin-bottom: 15px;
   font-size: 20px;
 }
 #hero .download-btn {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 19px;
   display: inline-block;
-  padding: 8px 24px 10px 46px;
+  padding: 10px 24px 10px 56px;
   border-radius: 3px;
   transition: 0.5s;
   color: #fff;
@@ -344,7 +350,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #5777ba;
 }
 #hero .download-btn i {
-  font-size: 20px;
+  font-size: 30px;
   position: absolute;
   left: 18px;
   top: 8.5px;
@@ -403,7 +409,7 @@ section {
   padding-bottom: 30px;
 }
 .section-title h2 {
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 400;
   margin-bottom: 20px;
   padding-bottom: 0;
@@ -412,6 +418,7 @@ section {
 }
 .section-title p {
   margin-bottom: 0;
+  font-size: 18px;
 }
 
 /*--------------------------------------------------------------
@@ -649,7 +656,7 @@ section {
   color: #5777ba;
 }
 .features .content .icon-box p {
-  font-size: 15px;
+  font-size: 16px;
   color: #979aa1;
   margin-left: 60px;
 }
@@ -683,13 +690,18 @@ section {
   padding: 0;
 }
 .details .content ul li {
-  padding-bottom: 10px;
+  font-size: 23px;
+  list-style-type: disc;
+  list-style-position: inside;
 }
 .details .content ul i {
   font-size: 24px;
   padding-right: 2px;
   color: #5777ba;
   line-height: 0;
+}
+.details .content p {
+  font-size: 23px;
 }
 .details .content p:last-child {
   margin-bottom: 0;
@@ -911,9 +923,6 @@ section {
   padding: 0;
   list-style: none;
 }
-.faq .accordion-list li + li {
-  margin-top: 15px;
-}
 .faq .accordion-list li {
   padding: 20px;
   background: #fff;
@@ -924,12 +933,24 @@ section {
   display: block;
   position: relative;
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 24px;
   font-weight: 500;
   padding: 0 30px;
   outline: none;
   cursor: pointer;
+}
+.faq .accordion-list a.references {
+  display: inline;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  padding: 0;
+  cursor: pointer;
+}
+.faq .accordion-list .inner-list li {
+  padding: 0;
+  list-style-type: disc;
+  list-style-position: inside;
 }
 .faq .accordion-list .icon-help {
   font-size: 24px;
@@ -951,8 +972,16 @@ section {
 .faq .accordion-list .icon-show {
   display: none;
 }
+.faq .accordion-list ul {
+  font-size: 18px;
+}
+.faq .accordion-list ol li {
+  font-size: 18px;
+  padding-bottom: 0;
+}
 .faq .accordion-list a.collapsed {
   color: #343a40;
+  font-size: 20px;
 }
 .faq .accordion-list a.collapsed:hover {
   color: #5777ba;
