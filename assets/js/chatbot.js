@@ -1,6 +1,13 @@
 // Make chatbot open by default.
 var isChatOpen = true;
 
+/* Changes chat input styling on key up event. */
+$('.chat-input input').keyup(function (e) {
+  ($(this).val() == '') 
+  ? $(this).removeAttr('chatInputStyle') 
+  : $(this).attr('chatInputStyle', '');
+});
+
 /* Open and closes the chatbot. */
 $('#chat-button button').click(function () {
   if (isChatOpen) {
