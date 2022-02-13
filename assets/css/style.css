@@ -62,9 +62,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   
 }
-#webchat {
-  padding-bottom: 8%;
-}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -505,7 +503,7 @@ section {
   position: fixed;
   bottom: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 100;
 }
 
 
@@ -637,16 +635,39 @@ section {
   text-align: right;
 }
 
-#chatbot #chat-button button
-{
-  width: 100%;
+.custom-btn-style {
+  background: url('../img/Chatbot_icon_small.png');
+  /* image source: https://www.flaticon.com/premium-icon/chatbot_2068998 */
+  background-position:center;
+  background-repeat:no-repeat;
+  border: solid, 1px, #04AA6D;
+  color: white;
+  padding: 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+  margin: 0.5em 0.25em;
+  border-radius: 50%;  
+  width: 75px;
+  height: 75px;
 }
-
+#chat-button 
+{
+  position: fixed;
+  bottom: 1.5em;
+  right: 0;
+  z-index: 101;
+  
+}
 @media (max-width: 992px) {
   #chatbot 
   {
     width: 30em;
     height: 27em;
+  }
+  #chat-button {
+    bottom: 28em;
   }
   .chatbox  {
     width: 30em;
@@ -660,6 +681,9 @@ section {
   {
     width: 25em;
     height: 22em;
+  }
+  #chat-button {
+    bottom: 23em;
   }
   .chatbox {
     width: 25em;
