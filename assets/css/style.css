@@ -32,6 +32,36 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid #ddd; 
   border-radius: 10px;
 }
+#webchat {
+  height: 100%;
+  width: 100%;
+}
+
+#webchat[watermark="true"] [role="complementary"] ul[role="list"]::after {
+  content: "Powered By ...";
+  background: linear-gradient(rgba(248, 248, 248, 0), rgba(248, 248, 248, .63), #F8F8F8 40%);
+  bottom: 0;
+  right: 0;
+  color: #707070;
+  display: block;
+  font-family: 'Segoe Semibold', Calibri, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 12px;
+  padding: 15px 10px 10px;
+  position: absolute;
+  position: sticky;
+  text-align: right;
+}
+
+#webchat[watermark="true"] .webchat__scrollToEndButton {
+  bottom: 32px;
+  left: 50%;
+  right: unset;
+  transform: translate(-50%, 0);
+}
+#webchat section {
+  padding: 0;
+  
+}
 
 /*--------------------------------------------------------------
 # Back to top button
@@ -468,20 +498,20 @@ section {
 
 #chatbot {
   width: 30em;
-  height: 37em;
+  height: 32px;
   padding: 0;
   position: fixed;
   bottom: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 100;
 }
 
 
-.chatbox {
+#chatbox {
   width: 30em;
   height: 35em;
   max-height: 35em;
-  display: flex;
+  display: none;
   flex-direction: column;
   overflow: hidden;
   box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
@@ -525,14 +555,14 @@ section {
   margin: 10px;
   transition: all 0.15s ease-in-out;
 }
-.chat-input input[chatInputStyle] + button {
+.chat-input input[good] + button {
   box-shadow: 0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
   background: #2671ff;
 }
-.chat-input input[chatInputStyle] + button:hover {
+.chat-input input[good] + button:hover {
   box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 }
-.chat-input input[chatInputStyle] + button path {
+.chat-input input[good] + button path {
   fill: white;
 }
 .msg-container {
@@ -605,16 +635,39 @@ section {
   text-align: right;
 }
 
-#chatbot #chat-button button
-{
-  width: 100%;
+.custom-btn-style {
+  background: url('../img/Chatbot_icon_small.png');
+  /* image source: https://www.flaticon.com/premium-icon/chatbot_2068998 */
+  background-position:center;
+  background-repeat:no-repeat;
+  border: solid, 1px, #04AA6D;
+  color: white;
+  padding: 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+  margin: 0.5em 0.25em;
+  border-radius: 50%;  
+  width: 75px;
+  height: 75px;
 }
-
+#chat-button 
+{
+  position: fixed;
+  bottom: 1.5em;
+  right: 0;
+  z-index: 101;
+  
+}
 @media (max-width: 992px) {
   #chatbot 
   {
     width: 30em;
     height: 27em;
+  }
+  #chat-button {
+    bottom: 28em;
   }
   .chatbox  {
     width: 30em;
@@ -628,6 +681,9 @@ section {
   {
     width: 25em;
     height: 22em;
+  }
+  #chat-button {
+    bottom: 23em;
   }
   .chatbox {
     width: 25em;
