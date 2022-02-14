@@ -1,34 +1,13 @@
 // Make chatbot closed by default.
 var isChatOpen = false;
 var isBotCreated = false;
-$('#chat-button').click(function(){
-  if(isChatOpen)
+$('#chat-button').click(openCloseChatbot);
+$('#start-screening').click(function(){
+  if (isChatOpen)
   {
-    // Close chatbot.
-    $('#webchat').css('display', 'none');
-    $('#chatbot').css('height', '32px'); 
-    $('#chatbot').css('border', 'none'); 
-    $('#chatbot').css('box-shadow', 'none'); 
-
-    $("#chat-button").css("bottom", "1.5em");
-
-    // Update boolean to reflect that chatbot is now closed.
-    isChatOpen = false;  
+    return;
   }
-  else
-  {
-    // Open chatbot.
-    $('#webchat').css('display', 'block');
-    isChatOpen = true;
-    increaseChatHeight();
-    // Update boolean to reflect that chatbot is now open.
-    if(!isBotCreated)
-    {
-      chatRequested();
-      isBotCreated = true
-    }
-  }
-    
+  openCloseChatbot();
 });
 
 /* Sets the chatbot height when the window is resized. */
@@ -38,6 +17,37 @@ $(window).resize(function () {
   }
   increaseChatHeight();
 });
+
+/* Opens and Closes the Chatbox */
+function openCloseChatbot()
+{
+    if(isChatOpen)
+    {
+      // Close chatbot.
+      $('#webchat').css('display', 'none');
+      $('#chatbot').css('height', '32px'); 
+      $('#chatbot').css('border', 'none'); 
+      $('#chatbot').css('box-shadow', 'none'); 
+  
+      $("#chat-button").css("bottom", "1.5em");
+  
+      // Update boolean to reflect that chatbot is now closed.
+      isChatOpen = false;  
+    }
+    else
+    {
+      // Open chatbot.
+      $('#webchat').css('display', 'block');
+      isChatOpen = true;
+      increaseChatHeight();
+      // Update boolean to reflect that chatbot is now open.
+      if(!isBotCreated)
+      {
+        chatRequested();
+        isBotCreated = true
+      }
+    }  
+}
 
 
 /* Displays the chatbot by setting its height for different screen sizes. */
