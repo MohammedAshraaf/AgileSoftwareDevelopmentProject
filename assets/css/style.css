@@ -503,7 +503,7 @@ section {
   position: fixed;
   bottom: 0;
   right: 0;
-  z-index: 100;
+  z-index: 10000;
 }
 
 
@@ -657,7 +657,7 @@ section {
   position: fixed;
   bottom: 1.5em;
   right: 0;
-  z-index: 101;
+  z-index: 10001;
   
 }
 @media (max-width: 992px) {
