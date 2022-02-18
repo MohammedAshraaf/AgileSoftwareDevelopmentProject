@@ -101,10 +101,10 @@ function toggleChatHeight() {
 /*************** ASSERTION TESTING / ERROR HANDLING ***************/
 
 // Convert 1em to px. Required for assertion tests / error handling.
-var oneEM = parseFloat(getComputedStyle($('#chat-button').get(0)).fontSize);
 
 /* Verifies that chatbot is closed when it is supposed to be. */
 function assertChatBotIsClosed() {
+  var oneEM = parseFloat(getComputedStyle($('#chat-button').get(0)).fontSize);
   assert($('#webchat').css('display') == 'none');
   assert($('#chatbot').css('height') == '32px');
   assert($('#chatbot').css('border').includes('none'));
@@ -114,6 +114,7 @@ function assertChatBotIsClosed() {
 
 /* Verifies that chat height is appropriate for the screen size. */
 function assertChatHeightForScreenSize(heightValueInEm, bottomValueInEm) {
+  var oneEM = parseFloat(getComputedStyle($('#chat-button').get(0)).fontSize);
   assert($('#chatbot').css('height') == oneEM * heightValueInEm + 'px');
   assert($("#chat-button").css("bottom") == oneEM * bottomValueInEm + 'px');
   assert($('#chatbot').css('border') == '2px solid rgb(0, 0, 0)');
