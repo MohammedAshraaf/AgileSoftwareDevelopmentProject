@@ -663,10 +663,10 @@ section {
   #chatbot 
   {
     width: 30em;
-    height: 27em;
+    height: 44em;
   }
   #chat-button {
-    bottom: 28em;
+    bottom: 43.5em;
   }
   .chatbox  {
     width: 30em;
@@ -679,10 +679,10 @@ section {
   #chatbot 
   {
     width: 25em;
-    height: 22em;
+    height: 44em;
   }
   #chat-button {
-    bottom: 23em;
+    bottom: 43.5em;
   }
   .chatbox {
     width: 25em;

@@ -18,10 +18,11 @@ $('#start-screening').click(function(){
 
 /* Sets the chatbot height when the window is resized. */
 $(window).resize(function () {
+  toggleChatHeight();
+
   if (isChatOpen) {
     return;
   }
-  toggleChatHeight();
 });
 
 /* Opens and Closes the Chatbox */
@@ -72,24 +73,24 @@ function toggleChatHeight() {
     return;
   }
   if (window.matchMedia('(max-width: 767px)').matches) {
-    $('#chatbot').css('height', "22em");
-    $("#chat-button").css("bottom", "21.5em");
+    $('#chatbot').css('height', "44em");
+    $("#chat-button").css("bottom", "43.5em");
     $('#chatbot').css('border', '2px solid rgb(0, 0, 0)'); 
     $('#chatbot').css('box-shadow', 'rgba(0, 0, 0, 0.14) 0px 0px 4px 0px, rgba(0, 0, 0, 0.28) 0px 4px 8px 0px');
 
     if (testMode) assertChatHeightForScreenSize(22, 21.5);
   }
   else if (window.matchMedia('(max-width: 992px)').matches) {
-    $('#chatbot').css('height', "27em");
-    $("#chat-button").css("bottom", "26.5em");
+    $('#chatbot').css('height', "44em");
+    $("#chat-button").css("bottom", "43.5em");
     $('#chatbot').css('border', '2px solid rgb(0, 0, 0)'); 
     $('#chatbot').css('box-shadow', 'rgba(0, 0, 0, 0.14) 0px 0px 4px 0px, rgba(0, 0, 0, 0.28) 0px 4px 8px 0px'); 
 
     if (testMode) assertChatHeightForScreenSize(27, 26.5);
   }
   else {
-    $('#chatbot').css('height', "37em");
-    $("#chat-button").css("bottom", "36.5em");
+    $('#chatbot').css('height', "44em");
+    $("#chat-button").css("bottom", "43.5em");
     $('#chatbot').css('border', '2px solid rgb(0, 0, 0)'); 
     $('#chatbot').css('box-shadow', 'rgba(0, 0, 0, 0.14) 0px 0px 4px 0px, rgba(0, 0, 0, 0.28) 0px 4px 8px 0px'); 
 
