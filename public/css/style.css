@@ -654,7 +654,7 @@ section {
 #chat-button 
 {
   position: fixed;
-  bottom: 1.5em;
+  bottom: 3%;
   right: 0;
   z-index: 10001;
   
@@ -663,10 +663,10 @@ section {
   #chatbot 
   {
     width: 30em;
-    height: 44em;
+    height: 70%;
   }
   #chat-button {
-    bottom: 43.5em;
+    bottom: 69%;
   }
   .chatbox  {
     width: 30em;
@@ -679,10 +679,10 @@ section {
   #chatbot 
   {
     width: 25em;
-    height: 44em;
+    height: 70%;
   }
   #chat-button {
-    bottom: 43.5em;
+    bottom: 69%;
   }
   .chatbox {
     width: 25em;
