@@ -1,2 +1,0 @@
-# AgileSoftwareDevelopmentProject
-Mental Health Chatbot

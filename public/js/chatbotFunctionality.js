@@ -76,6 +76,8 @@ function toggleChatHeight() {
   $("#chat-button").css("bottom", "69%");
   $('#chatbot').css('border', '2px solid rgb(0, 0, 0)'); 
   $('#chatbot').css('box-shadow', 'rgba(0, 0, 0, 0.14) 0px 0px 4px 0px, rgba(0, 0, 0, 0.28) 0px 4px 8px 0px');
+  $('.webchat__basic-transcript__scrollable').css('display', 'block !important');
+
 }
 
 
