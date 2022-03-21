@@ -72,30 +72,10 @@ function toggleChatHeight() {
     
     return;
   }
-  if (window.matchMedia('(max-width: 767px)').matches) {
-    $('#chatbot').css('height', "44em");
-    $("#chat-button").css("bottom", "43.5em");
-    $('#chatbot').css('border', '2px solid rgb(0, 0, 0)'); 
-    $('#chatbot').css('box-shadow', 'rgba(0, 0, 0, 0.14) 0px 0px 4px 0px, rgba(0, 0, 0, 0.28) 0px 4px 8px 0px');
-
-    if (testMode) assertChatHeightForScreenSize(22, 21.5);
-  }
-  else if (window.matchMedia('(max-width: 992px)').matches) {
-    $('#chatbot').css('height', "44em");
-    $("#chat-button").css("bottom", "43.5em");
-    $('#chatbot').css('border', '2px solid rgb(0, 0, 0)'); 
-    $('#chatbot').css('box-shadow', 'rgba(0, 0, 0, 0.14) 0px 0px 4px 0px, rgba(0, 0, 0, 0.28) 0px 4px 8px 0px'); 
-
-    if (testMode) assertChatHeightForScreenSize(27, 26.5);
-  }
-  else {
-    $('#chatbot').css('height', "44em");
-    $("#chat-button").css("bottom", "43.5em");
-    $('#chatbot').css('border', '2px solid rgb(0, 0, 0)'); 
-    $('#chatbot').css('box-shadow', 'rgba(0, 0, 0, 0.14) 0px 0px 4px 0px, rgba(0, 0, 0, 0.28) 0px 4px 8px 0px'); 
-
-    if (testMode) assertChatHeightForScreenSize(37, 36.5);
-  }
+  $('#chatbot').css('height', "70%");
+  $("#chat-button").css("bottom", "69%");
+  $('#chatbot').css('border', '2px solid rgb(0, 0, 0)'); 
+  $('#chatbot').css('box-shadow', 'rgba(0, 0, 0, 0.14) 0px 0px 4px 0px, rgba(0, 0, 0, 0.28) 0px 4px 8px 0px');
 }
 
 
